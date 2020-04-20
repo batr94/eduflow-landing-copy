@@ -38,6 +38,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "basicscroll": "^3.0.3",
     "reset-css": "^5.0.1"
   }
 }

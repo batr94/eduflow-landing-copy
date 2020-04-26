@@ -12,6 +12,7 @@
 }
 
 body {
+    color: $defaultColor;
     height: 5000px;
 }
 
@@ -23,21 +24,83 @@ body {
     padding-right: 24px;
 }
 
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.responsive-image {
+    height: auto;
+    width: 100%;
+}
+
 .heading {
-    font-size: 48px;
     font-weight: bold;
     line-height: 1.35;
-    margin-bottom: 24px;
-    margin-top: 0;
+
+    &_large {
+        font-size: 48px;
+    }
+
+    &_medium {
+        font-size: 40px;
+    }
+
+    &_small {
+        font-size: 32px;
+    }
 }
 
 .text {
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+
+    &_size {
+        &-large {
+            font-size: 20px;
+        }
+
+        &-medium {
+            font-size: 16px;
+        }
+
+        &-small {
+            font-size: 12px;
+        }
+        
+        &-smallest {
+            font-size: 10px;
+        }
+    }
+
+    &_bold {
+        font-weight: bold;
+    }
+
+    &_neutral {
+        color: $neutralColor;
+    }
 }
 
 .link {
+    color: inherit;
     text-decoration: none;
+
+    &_cta {
+        align-items: center;
+        color: #006cfa;
+        display: flex;
+    }
+
+    &__icon {
+        margin-left: 8px;
+        transition: .3s ease transform;
+    }
+
+    &:hover &__icon {
+        transform: translate(8px);
+    }
 }
 
 .header {
@@ -58,7 +121,6 @@ body {
     &__link {
         color: #ffffff;
         font-size: 18px;
-        line-height: 24px;
         transition: color .2s ease;
 
         &:hover {
@@ -67,15 +129,57 @@ body {
     }
 }
 
+.card {
+    border: 1px solid #e6eaef;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.06);
+    display: block;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+
+    &:hover {
+        box-shadow: 0 6px 16px 0 rgba(0,0,0,.08);
+        transform: translate(0, -2px);
+    }
+
+    &__image-wrapper {
+        align-items: center;
+        display: flex;
+        height: 160px;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &__content {
+        margin: 24px;
+        padding-right: 36px;
+        position: relative;
+    }
+
+    &__label {
+        letter-spacing: 0.8;
+        margin-bottom: 4px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        transform: rotate(-45deg);
+    }
+}
+
 .hero {
     background-color: #001632;
     color: #ffffff;
 
     &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         margin-top: 64px;
+    }
+
+    &__heading {
+        margin-bottom: 24px;
+        margin-top: 0;
     }
 
     &__content-left {
@@ -102,12 +206,12 @@ body {
 
     &__image {
         position: absolute;
-        will-change: transform;
 
         &_middle {
             box-shadow: 0 12px 4px 0 rgba(0,0,0,.16);
             transform: translate(var(--image-position-inverse), var(--image-position-inverse));
             width: 510px;
+            will-change: transform;
         }
 
         &_top {
@@ -116,6 +220,57 @@ body {
             right: 0;
             transform: translate(var(--image-position), var(--image-position));
             width: 420px;
+            will-change: transform;
         }
+    }
+}
+
+.product {
+    padding-top: 224px;
+    padding-bottom: 160px;
+
+    &__heading {
+        margin-bottom: 32px;
+        margin-top: 40px;
+    }
+
+    &__content-left {
+        width: 360px;
+    }
+
+    &__content-right {
+        width: 792px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 24px;
+
+        &-icon {
+            margin-top: 8px;
+        }
+
+        &-text {
+            margin-left: 12px;
+        }
+    }
+}
+
+.example {
+    padding-bottom: 120px;
+    padding-top: 120px;
+
+    &__heading {
+        margin-bottom: 24px;
+        max-width: 480px;
+    }
+
+    &__text {
+        margin-bottom: 56px;
+        max-width: 640px;
+    }
+
+    &__card {
+        width: calc(25% - 18px);
     }
 }

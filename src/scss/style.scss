@@ -84,13 +84,17 @@ body {
 }
 
 .link {
-    color: inherit;
     text-decoration: none;
 
     &_cta {
         align-items: center;
         color: #006cfa;
         display: flex;
+    }
+
+    &_blocky {
+        color: inherit;
+        display: block;
     }
 
     &__icon {
@@ -243,6 +247,7 @@ body {
     }
 
     &__item {
+        align-items: flex-start;
         display: flex;
         margin-bottom: 24px;
 

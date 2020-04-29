@@ -137,7 +137,6 @@ body {
     border: 1px solid #e6eaef;
     border-radius: 8px;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.06);
-    display: block;
     overflow: hidden;
     transition: transform .2s ease, box-shadow .2s ease;
 
@@ -277,5 +276,85 @@ body {
 
     &__card {
         width: calc(25% - 18px);
+    }
+}
+
+.flows {
+    background-color: #e7fbf1;
+    padding-top: 160px;
+
+    &__heading {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__text {
+        margin: 0 auto 80px;
+        max-width: 640px;
+    }
+
+    &__tab {
+        align-items: center;
+        display: none;
+        justify-content: space-around;
+
+        &_active {
+            display: flex;
+        }
+
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+
+        &-content {
+            max-width: 480px;
+            padding-bottom: 72px;
+        }
+        
+        &-heading {
+            margin-bottom: 16px;
+        }
+        
+        &-label {
+            background-color: #000000;
+            border-radius: 2px;
+            color: #ffffff;
+            display: inline-block;
+            letter-spacing: .04;
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+    
+        &-image {
+            max-height: 380px;
+        }
+    }
+
+    &__tab-links-wrapper {
+        background-color: #ffffff;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.04);
+        display: flex;
+        flex: 1 0 auto;
+        margin-top: 56px;
+        position: relative;
+        top: 52px;
+    }
+
+    &__tab-link {
+        border-top: 2px solid transparent;
+        cursor: pointer;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 40px 0;
+        text-align: center;
+
+        &_active {
+            border-top: 2px solid #0cd977;
+            color: $defaultColor;
+        }
     }
 }

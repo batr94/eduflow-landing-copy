@@ -11,8 +11,7 @@ const heroImagesAnimation = basicScroll.create({
     },
     '--image-position': {
       from: 0,
-      to: '35px',
-      timing: (x) => 1 - Math.pow(1 - x, 3),
+      to: '24px',
     }
   }
 });
@@ -22,8 +21,8 @@ const circleAnimation = basicScroll.create({
   to: '2500px',
   props: {
     '--example-circle-position-x': {
-      from: '-40px',
-      to: 0
+      from: '-70px',
+      to: '-30px',
     },
     '--example-circle-position-y': {
       from: '-320px',
@@ -36,5 +35,17 @@ const circleAnimation = basicScroll.create({
   }
 });
 
+const stickyMenuAnimation = basicScroll.create({
+  from: '2200px',
+  to: '2250px',
+  props: {
+    '--sticky-menu-position': {
+      from: '-64px',
+      to: 0,
+    }
+  }
+})
+
 heroImagesAnimation.start();
 circleAnimation.start();
+stickyMenuAnimation.start();

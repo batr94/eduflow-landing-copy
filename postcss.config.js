@@ -3,11 +3,13 @@ module.exports = {
     require('autoprefixer'),
     require('cssnano')({
       preset: ['default', {
-          discardComments: {
-              removeAll: true,
-          },
+        discardComments: {
+            removeAll: true,
+        },
       }]
-  }),
-    require('css-mqpacker'),
+    }),
+    require('css-mqpacker')({
+      sort: true,
+    }),
   ],
 };

@@ -1,4 +1,5 @@
 import * as basicScroll from 'basicscroll';
+import CustomTab from './slider';
 import './scss/style.scss';
 
 const heroImagesAnimation = basicScroll.create({
@@ -49,3 +50,22 @@ const stickyMenuAnimation = basicScroll.create({
 heroImagesAnimation.start();
 circleAnimation.start();
 stickyMenuAnimation.start();
+
+const flowsTab = new CustomTab({
+  container: '.flows',
+  tabSelector: '.flows__tab',
+  tabLinkSelector: '.flows__tab-link',
+  activeTabClass: 'flows__tab_active',
+  activeTabLinkClass: 'flows__tab-link_active',
+});
+
+const studentsProductsTab = new CustomTab({
+  container: '.students-product__column_right',
+  tabSelector: '.students-product__tab',
+  tabLinkSelector: '.students-product__tab-link',
+  activeTabClass: 'students-product__tab_active',
+  activeTabLinkClass: 'students-product__tab-link_active',
+})
+
+flowsTab.run();
+studentsProductsTab.run();

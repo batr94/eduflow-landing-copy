@@ -616,9 +616,13 @@ body {
 
     &__tab {
         align-items: center;
-        flex-direction: column;
         display: none;
+        flex-direction: column;
         justify-content: space-around;
+        // max-height: 0;
+        // opacity: 0;
+        // overflow: hidden;
+        // transition: max-height 0s .1s, opacity .1s;
 
         @include for-size(desktop-up) {
             flex-direction: row;
@@ -626,6 +630,9 @@ body {
 
         &_active {
             display: flex;
+            // max-height: 1000px;
+            // opacity: 1;
+            // transition: max-height 0s .1s, opacity .2s .1s;
         }
 
         &_reverse {
@@ -698,12 +705,12 @@ body {
         font-size: 14px;
         padding: 8px 16px;
         text-align: center;
-        transition: .1s color ease;
         width: auto;
 
         @include for-size(tablet-landscape-up) {
             color: $neutralColor;
             padding: 40px 0;
+            transition: .1s color ease;
             width: 100%;
         }
 
@@ -712,7 +719,11 @@ body {
         }
 
         &:hover {
-            color: $defaultColor;
+            color: #ffffff;
+
+            @include for-size(tablet-landscape-up) {
+                color: $defaultColor;
+            }
         }
 
         &_active {
@@ -845,15 +856,27 @@ body {
         }
     }
 
-    &__tab-content {
+    &__tab {
+        // max-height: 0;
+        // opacity: 0;
+        // overflow: hidden;
+        // transition: max-height 0s .1s,opacity .1s;
         box-shadow: 0 2px 12px 0 rgba(0,0,0,.04);
-        margin-bottom: 32px;
+        display: none;
+
+        &_active {
+            display: flex;
+            // max-height: 1000px;
+            // opacity: 1;
+            // transition: max-height 0s .1s, opacity .2s .1s;
+        }
     }
 
     &__tab-links-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 32px;
         width: 100%;
     }
 

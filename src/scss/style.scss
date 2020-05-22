@@ -144,7 +144,7 @@ body {
     }
 
     &_blue {
-        fill: $ctaColor;
+        fill: #0058f9;
     }
 
     &_green {
@@ -165,7 +165,7 @@ body {
 
     &_cta {
         align-items: center;
-        color: $ctaColor;
+        color: #0058f9;
         display: flex;
         font-size: 18px;
         text-decoration: none;
@@ -326,7 +326,7 @@ body {
 }
 
 .hero {
-    background-color: #001632;
+    background-color: #171332;
     color: #ffffff;
 
     &__wrapper {
@@ -379,7 +379,7 @@ body {
     }
 
     &__decorative-box {
-        background-color: #034543;
+        background-color: #2a5d67;
         bottom: -15px;
         height: 230px;
         opacity: var(--box-opacity);
@@ -574,7 +574,7 @@ body {
         z-index: -1;
 
         &_color {
-            background-color: #e7fbf1;
+            background-color: #e5fbff;
             right: 0;
             top: 0;  
         }
@@ -592,7 +592,7 @@ body {
 }
 
 .flows {
-    background-color: #e7fbf1;
+    background-color: #e5fbff;
     padding-bottom: 60px;
     padding-top: 80px;
 
@@ -728,14 +728,14 @@ body {
         }
 
         &_active {
-            background-color: $defaultColor;
+            background-color: #171332;
             border-radius: 4px;
             color: #ffffff;
 
             @include for-size(tablet-landscape-up) {
                 background-color: inherit;
                 border-radius: 0;
-                border-top: 2px solid #0cd977;
+                border-top: 2px solid #00d1f9;
                 color: $defaultColor;
             }
             
@@ -994,7 +994,7 @@ body {
 }
 
 .cta {
-    background-color: #001632;
+    background-color: #171332;
     background-image: url(../img/cta_bg.svg);
     background-position: 50% 50%;
     background-size: 40px;
@@ -1004,7 +1004,7 @@ body {
 
     &__wrapper {
         align-items: center;
-        background-color: #001632;
+        background-color: #171332;
         flex-direction: column;
         justify-content: space-around;
         padding-bottom: 96px;

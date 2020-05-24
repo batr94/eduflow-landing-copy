@@ -47,11 +47,11 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader',
-        options: {
-          // Фикс обработки src тега source
-          // в документации неправильно указан атрибут. Там attributes, а правильно attrs
-          attrs: [':src'],
-        },
+        // options: {
+        //   // Фикс обработки src тега source
+        //   // в документации неправильно указан атрибут. Там attributes, а правильно attrs
+        //   attrs: [':src'],
+        // },
       },
       {
         test: /\.s[a|c]ss$/,
@@ -77,7 +77,7 @@ module.exports = {
               name: '[name].[ext]',
               outputPath: 'images',
               //костыль для устранения [object Module] в html файлах
-              esModule: false,
+              // esModule: false,
             }
           }
         ],

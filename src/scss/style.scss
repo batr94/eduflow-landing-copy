@@ -21,7 +21,6 @@
 
 body {
     color: $defaultColor;
-    height: 7000px;
 }
 
 .container {
@@ -200,7 +199,7 @@ body {
 
         &_sticky {
             align-items: center;
-            height: 100%;
+            height: 64px;
         }
     }
 

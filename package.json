@@ -16,7 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.9.6",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.0.6",
@@ -40,7 +40,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.6",
+    "@babel/runtime": "^7.10.2",
     "basicscroll": "^3.0.3",
     "reset-css": "^5.0.1"
   }
